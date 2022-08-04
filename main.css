@@ -1,0 +1,303 @@
+:root {
+    --color-primary: #6441a5;
+    --color-success: #1db954;
+    --color-danger: #ff0000;
+    --color-warning: #fffc00;
+    --color-sky: #4ecdff;
+    --color-darker: #171717;
+    --color-light: #fafafa;
+    --transition: all 0.3s ease;
+    --shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    --borde-radius: 0.4rem;
+  }
+  body {
+    height: max-content;
+    padding-bottom: 40rem;
+  }
+  main {
+    border-left: 0.1rem solid #eee;
+    max-width: 75%;
+    margin-left: auto;
+  }
+  aside {
+    width: 27rem;
+    position: fixed;
+    top: 5rem;
+    opacity: 0;
+    animation: showUp 1s 1s forwards;
+  }
+  main {
+    opacity: 0;
+    animation: showUp 1s 1.5s forwards;
+  }
+  aside i {
+    font-size: 2rem;
+  }
+  aside a {
+    color: inherit;
+  }
+  h2 {
+    margin-top: 2rem;
+  }
+  nav {
+    display: none;
+  }
+  .cd-snippet {
+    font-family: monospace;
+    background-color: #eee;
+    border: 0.1rem solid #fff;
+    border-radius: 0.4rem;
+    padding: 0.2rem 0.4rem;
+    font-size: 1.6rem;
+  }
+  .code-snippet {
+    font-family: monospace;
+    background-color: #eee;
+    border: 0.1rem solid #fff;
+    border-radius: 0.4rem;
+    font-size: 1.6rem;
+  }
+  .code-snippet p {
+    margin: 0;
+    padding: 0;
+  }
+  .comment {
+    color: rgb(126, 126, 126);
+  }
+  .prev-div {
+    background-color: #fff;
+    border: 0.1rem solid #eee;
+    border-radius: var(--borde-radius);
+    overflow: hidden;
+  }
+  .prev-div span {
+    font-size: 1.4rem;
+  }
+  .div-1 {
+    height: 3rem;
+    background-color: var(--color-sky);
+  }
+  .div-2 {
+    height: 3rem;
+    background-color: var(--color-warning);
+  }
+  .div-3 {
+    height: 3rem;
+    background-color: var(--color-success);
+  }
+  .div-4 {
+    height: 3rem;
+    background-color: var(--color-danger);
+  }
+  .hl {
+    font-size: inherit;
+    color: var(--color-primary);
+  }
+  .cta-btn {
+    font-weight: bold;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    padding: 0.4rem 1rem;
+    font-size: 1.6rem;
+    color: var(--color-light);
+    background-color: var(--color-darker);
+    border-radius: var(--borde-radius);
+    width: fit-content;
+  }
+  .bha {
+    animation: jiggle 1.5s 1.5s 1000 ease-in-out;
+  }
+  .socials {
+    margin-left: auto;
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .socials a {
+    font-size: 4rem;
+    color: #171717;
+  }
+  @media (max-width: 1290px) {
+    body {
+      font-size: 1.2rem;
+    }
+    nav {
+      display: block;
+    }
+    .nav__icon {
+      width: 100%;
+      font-size: 5rem;
+      padding: 1rem 2rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 12;
+      background-color: var(--color-light);
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      color: var(--color-darker);
+      gap: 2rem;
+    }
+    .nav__icon h1 {
+      margin: 0;
+      padding: 0;
+      font-size: 3rem;
+    }
+    .navbar {
+      gap: 2rem;
+      padding: 2rem;
+      z-index: 11;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      height: 100vh;
+      position: fixed;
+      width: 100%;
+      background-color: var(--color-light);
+      transform: translateX(-200%);
+    }
+    .navbar.show-nav {
+      transform: translateX(0%);
+      transition: all 0.5s ease;
+    }
+    .navbar a {
+      color: inherit;
+      font-size: 2rem;
+    }
+    .cta-btn {
+      color: var(--color-light) !important;
+      width: calc(100% -2rem);
+    }
+    .navbar i {
+      font-size: 2.5rem;
+    }
+    .container {
+      width: 90%;
+      padding: 0;
+    }
+    main {
+      padding-top: 5rem;
+      border: none;
+      max-width: 100% !important;
+      margin: 0;
+      width: 100% !important;
+  
+      padding-left: 0 !important;
+      margin-left: 0 !important;
+    }
+    .os {
+      overflow-x: scroll;
+    }
+    aside {
+      display: none !important;
+    }
+  }
+  @media (max-width: 600px) {
+    body {
+      font-size: 1.2rem;
+    }
+    nav {
+      display: block;
+    }
+    .nav__icon {
+      width: 100%;
+      font-size: 5rem;
+      padding: 1rem 2rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 12;
+      background-color: var(--color-light);
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      color: var(--color-darker);
+      gap: 2rem;
+  
+      box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
+    }
+    .nav__icon h1 {
+      margin: 0;
+      padding: 0;
+      font-size: 3rem;
+    }
+    .navbar {
+      gap: 2rem;
+      padding: 2rem;
+      z-index: 11;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      height: 100vh;
+      position: fixed;
+      width: 100%;
+      background-color: var(--color-light);
+      transform: translateX(-200%);
+    }
+    .navbar.show-nav {
+      transform: translateX(0%);
+      transition: all 0.5s ease;
+    }
+    .navbar a {
+      color: inherit;
+      font-size: 2rem;
+    }
+    .cta-btn {
+      color: var(--color-light) !important;
+      width: calc(100% -2rem);
+    }
+    .navbar i {
+      font-size: 2.5rem;
+    }
+    .container {
+      width: 90%;
+      padding: 0;
+    }
+    main {
+      padding-top: 5rem;
+      border: none;
+      max-width: 100% !important;
+      margin: 0;
+      width: 100% !important;
+  
+      padding-left: 0 !important;
+      margin-left: 0 !important;
+    }
+    .os {
+      overflow-x: scroll;
+    }
+    aside {
+      display: none !important;
+    }
+  }
+  @keyframes navShow {
+    from {
+      transform: translateX(-200);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+  @keyframes jiggle {
+    0% {
+      transform: translateY(10%);
+    }
+    50% {
+      transform: translateY(-10%);
+    }
+    100% {
+      transform: translateY(10%);
+    }
+  }
+  @keyframes showUp {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- minimal css -->
+    <link rel="stylesheet" href="minimal.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="main.css" />
+    <!-- fontawesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Sirius NET</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__icon"><i id="nav-btn" class="fa-solid fa-bars"></i><h1>Sirius NET</h1></div>
+      <div class="navbar">
+        <a class="hov-2" href="#getting-started"
+          ><i class="fa-solid fa-gear"></i> getting started</a
+        >
+        <a class="hov-2" href="#containers"
+          ><i class="fa-solid fa-cube"></i> IOT</a
+        >
+        <a class="hov-2" href="#grid"
+          ><i class="fa-solid fa-border-none"></i> MQTT</a
+        >
+        <a href="#flex" class="hov-2"><i class="fa-solid fa-box"></i> HIVEMQ</a>
+        <a class="hov-2" href="#typo"
+          ><i class="fa-solid fa-heading"></i> Mosquitto</a
+        >
+        <a class="hov-2" href="#buttons"
+          ><i class="fa-solid fa-arrow-pointer"></i> buttons</a
+        >
+        <a class="hov-2" href="#form"
+          ><i class="fa-solid fa-square-check"></i> forms</a
+        >
+        <a class="hov-2" href="#tables"
+          ><i class="fa-solid fa-table-cells"></i> tables</a
+        >
+        <a href="#helper" class="hov-2"
+          ><i class="fa-solid fa-briefcase-medical"></i> helpers</a
+        >
+        <a href="https://github.com/MFLXU/minimal.css.git" class="cta-btn mt-2 hov-2 shadow bha">
+          download stylesheet <i class="fa-brands fa-github"></i
+        ></a>
+        
+      </div>
+    </nav>
+    <div class="main__container container flex g-5 pt-2 pb-2">
+      <aside class="flex flex-col g-1">
+        <h1>minimal.css</h1>
+        <a class="hov-2" href="#getting-started"
+          ><i class="fa-solid fa-gear"></i> getting started</a
+        >
+        <a class="hov-2" href="#containers"
+          ><i class="fa-solid fa-cube"></i> IOT</a
+        >
+        <a class="hov-2" href="#grid"
+          ><i class="fa-solid fa-border-none"></i> MQTT</a
+        >
+        <a href="#flex" class="hov-2"><i class="fa-solid fa-box"></i> HIVEMQ</a>
+        <a class="hov-2" href="#typo"
+          ><i class="fa-solid fa-heading"></i> Mosquitto</a
+        >
+        <a class="hov-2" href="#buttons"
+          ><i class="fa-solid fa-arrow-pointer"></i> buttons</a
+        >
+        <a class="hov-2" href="#form"
+          ><i class="fa-solid fa-square-check"></i> forms</a
+        >
+        <a class="hov-2" href="#tables"
+          ><i class="fa-solid fa-table-cells"></i> tables</a
+        >
+        <a href="#helper" class="hov-2"
+          ><i class="fa-solid fa-briefcase-medical"></i> helpers</a
+        >
+        <a href="https://github.com/MFLXU/minimal.css.git" class="cta-btn mt-2 hov-2 shadow bha">
+          download stylesheet</i
+        ></a>
+        <p class="mt-2">
+          open-source project by
+          <a class="hov-2" href="https://g.dev/mflxu" target="_blank"
+            >Sirius IOT team</a
+          >
+        </p>
+      </aside>
+      <main class="w-75 pl-2">
+        <div class="mb-5 mt-5">
+          <p>
+            <s>one of</s> the <b>best</b> minimalistic and simple css framework.
+          </p>
+          <h3>why use minimal.css?</h3>
+          <p>
+            you should use minimal.css when working on small projects that don't
+            need all the utility of large frameworks such as
+            <a href="https://getbootstrap.com/">bootstrap</a>,
+            <a href="https://tailwindcss.com/">tailwind</a>..., minimal.css only
+            style standards html elements.
+          </p>
+        </div>
+        <!-- intro -->
+        <h2 id="getting-started">getting started</h2>
+        <p>
+          start by cloning the github repository, then copy the minimal.css file
+          into your project folder.
+        </p>
+        <p>
+          after creating a new HTML5 file, link the minimal.css file in the
+          <span class="cd-snippet">head</span> section.
+        </p>
+        <div class="code-snippet p-2 mt-1 mb-1">
+          <p class="comment">&lt;!-- minimal css --&gt;</p>
+          <p>
+            &lt;link rel=&quot;stylesheet&quot; href=&quot;<span class="hl"
+              >minimal.css</span
+            >&quot; /&gt;
+          </p>
+        </div>
+        <p>now enjoy HTML5 with minimal.css styling applied.</p>
+        <!-- containers -->
+        <h2 id="containers">containers</h2>
+        <p>
+          container class changes depending on the viewport, element without the
+          <span class="cd-snippet">container</span> class applied will span
+          throught the width of the view port.
+        </p>
+        <div class="code-snippet p-2 mt-1 mb-1">
+          <p>&lt;div class=&quot;<span class="hl">container</span>&quot;&gt;</p>
+          <p class="comment ml-2">&lt;!-- content --&gt;</p>
+          &lt;/div&gt;
+        </div>
+        <table class="mt-1 mb-1">
+          <tr>
+            <th>desktop</th>
+            <th>tablet</th>
+            <th>smartphone</th>
+          </tr>
+          <tr>
+            <td>1300px</td>
+            <td>94%</td>
+            <td>90%</td>
+          </tr>
+        </table>
+        <!-- width & height -->
+        <h4>width & height</h4>
+        <p>
+          its easy to define the width or the height of an element and that
+          using the <span class="cd-snippet">w-(25...100)</span> for the width
+          or <span class="cd-snippet">h-(25...100)</span> for the height.
+        </p>
+        <div class="code-snippet p-2 mt-1 mb-1">
+          <p>&lt;div class=&quot;<span class="hl">container</span>&quot;&gt;</p>
+          <p>
+            &lt;div class=&quot;<span class="hl">div-1 w-25</span
+            >&quot;&gt;&lt;/div&gt;
+          </p>
+          <p>
+            &lt;div class=&quot;<span class="hl">div-2 w-50</span
+            >&quot;&gt;&lt;/div&gt;
+          </p>
+          <p>
+            &lt;div class=&quot;<span class="hl">div-3 w-75</span
+            >&quot;&gt;&lt;/div&gt;
+          </p>
+          <p>
+            &lt;div class=&quot;<span class="hl">div-4 w-100</span
+            >&quot;&gt;&lt;/div&gt;
+          </p>
+          <p>&lt;/div&gt;</p>
+        </div>
+        <div class="prev-div w-100 mt-1 mb-1">
+          <div class="div-1 w-25 vertical-center"><span>w-25</span></div>
+          <div class="div-2 w-50 vertical-center"><span>w-50</span></div>
+          <div class="div-3 w-75 vertical-center"><span>w-75</span></div>
+          <div class="div-4 w-100 vertical-center"><span>w-100</span></div>
+        </div>
+        <h4>margin & padding</h4>
+        <p>
+          to add a margin or padding to an element, simply add the
+          <span class="cd-snippet">m-(1...5)</span> for margin or
+          <span class="cd-snippet">m-(1...5)</span> for padding, to be more
+          specific use the direction specified classes.
+        </p>
+        <table>
+          <tr>
+            <th>direction</th>
+            <th>margin</th>
+            <th>padding</th>
+          </tr>
+          <tr>
+            <td>all</td>
+            <td>
+              <span class="cd-snippet">m-(1...5)</span>
+            </td>
+            <td><span class="cd-snippet">p-(1...5)</span></td>
+          </tr>
+          <tr>
+            <td>top</td>
+            <td>
+              <span class="cd-snippet">mt-(1...5)</span>
+            </td>
+            <td><span class="cd-snippet">pt-(1...5)</span></td>
+          </tr>
+          <tr>
+            <td>left</td>
+            <td>
+              <span class="cd-snippet">ml-(1...5)</span>
+            </td>
+            <td><span class="cd-snippet">pl-(1...5)</span></td>
+          </tr>
+          <tr>
+            <td>right</td>
+            <td>
+              <span class="cd-snippet">mr-(1...5)</span>
+            </td>
+            <td><span class="cd-snippet">pr-(1...5)</span></td>
+          </tr>
+          <tr>
+            <td>bottom</td>
+            <td>
+              <span class="cd-snippet">mb-(1...5)</span>
+            </td>
+            <td><span class="cd-snippet">pb-(1...5)</span></td>
+          </tr>
+        </table>
+        <div class="code-snippet mt-1 mb-1 p-2">
+          <p class="comment">
+            &lt;!-- gives the paragraph a margin of 2rem and padding of 1rem
+            --&gt;
+          </p>
+          <p>
+            &lt;p class=&quot;<span class="hl">m-2 p-1</span>&quot;&gt;Lorem
+            ipsum dolor sit amet.&lt;/p&gt;
+          </p>
+          <p class="comment">
+            &lt;!-- gives the paragraph a margin-top of 2rem and padding-left of
+            3rem --&gt;
+          </p>
+          <p>
+            &lt;p class=&quot;<span class="hl">mt-2 pl-3</span>&quot;&gt;Lorem
+            ipsum dolor sit amet.&lt;/p&gt;
+          </p>
+        </div>
+        <!-- grid system -->
+        <h2 id="grid">grid</h2>
+        <p>
+          a simple grid system, to set it up add the
+          <span class="cd-snippet">grid</span> class to it, and to set the
+          number of the columns use
+          <span class="cd-snippet">col-(1...12)</span>, rows are set to auto.
+        </p>
+        <div class="code-snippet p-2 mt-1 mb-1">
+          <p>
+            &lt;div class=&quot;<span class="hl">grid col-4</span>&quot;&gt;
+          </p>
+          <p class="ml-2">
+            &lt;div class=&quot;<span class="hl">div-1</span
+            >&quot;&gt;&lt;/div&gt;
+          </p>
+          <p>
+            &lt;div class=&quot;<span class="hl">div-2</span
+            >&quot;&gt;&lt;/div&gt;
+          </p>
+          <p>
+            &lt;div class=&quot;<span class="hl">div-3</span
+            >&quot;&gt;&lt;/div&gt;
+          </p>
+          <p>
+            &lt;div class=&quot;<span class="hl">div-4</span
+            >&quot;&gt;&lt;/div&gt;
+          </p>
+          <p>&lt;/div&gt;</p>
+        </div>
+        <div class="prev-div grid col-4 mt-1 mb-1">
+          <div class="div-1 vertical-center"></div>
+          <div class="div-2 vertical-center"></div>
+          <div class="div-3 vertical-center"></div>
+          <div class="div-4 vertical-center"></div>
+        </div>
+        <!-- gap -->
+        <h4>gap</h4>
+        <p>
+          to add a gap between the grid's elements use the
+          <span class="cd-snippet">g-(1...5)</span> class on the parent element.
+        </p>
+        <div class="prev-div grid col-4 mt-1 mb-1 g-5">
+          <div class="div-1 vertical-center"></div>
+          <div class="div-2 vertical-center"></div>
+          <div class="div-3 vertical-center"></div>
+          <div class="div-4 vertical-center"></div>
+        </div>
+        <!-- flex system -->
+        <h2 id="flex">Flexbox</h2>
+        <p>
+          just like the grid system the flexbox system is easy to use, start by
+          applying the <span class="cd-snippet">flex</span> class to the parent
+          element, by default the
+          <span class="cd-snippet">flex-direction</span> is set to row, to
+          change that add the <span class="cd-snippet">flex-col</span> class.
+        </p>
+        <table class="mt-1 mb-2">
+          <tr>
+            <th class="w-25">class</th>
+            <th>what it does</th>
+          </tr>
+          <tr>
+            <td><span class="cd-snippet">flex</span></td>
+            <td>display : flex</td>
+          </tr>
+          <tr>
+            <td><span class="cd-snippet">flex-col</span></td>
+            <td>flex-direction: column</td>
+          </tr>
+          <tr>
+            <td><span class="cd-snippet">justify-center</span></td>
+            <td>justify-content: center</td>
+          </tr>
+          <tr>
+            <td><span class="cd-snippet">space-between</span></td>
+            <td>justify-content: space-between</td>
+          </tr>
+          <tr>
+            <td><span class="cd-snippet">align-center</span></td>
+            <td>align-items: center</td>
+          </tr>
+          <tr>
+            <td><span class="cd-snippet">flex-rev-row </span></td>
+            <td>flex-direction: row-reverse</td>
+          </tr>
+          <tr>
+            <td><span class="cd-snippet">flex-rev-col</span></td>
+            <td>flex-direction: column-reverse</td>
+          </tr>
+        </table>
+        <p>
+          to verticaly center elements use the
+          <span class="cd-snippet">vertical-center</span> class.
+        </p>
+        <div class="prev-div vertical-center pt-3 pb-3 mt-1 mb-1">
+          <div class="div-1 w-25"></div>
+        </div>
+
+        <!-- typography -->
+        <h2 id="typo">typography</h2>
+        <p>
+          the font used is <em>DM SANS</em>, type is all set with
+          <span class="cd-snippet">rem</span> soo all font-size and spacial
+          relationships can be responsively sized based on a single HTML5
+          proprety, for example <span class="cd-snippet">3.6rem</span> equals to
+          <span class="cd-snippet">36px</span>.
+        </p>
+        <h1 class="ml-3">heading</h1>
+        <h2 class="ml-3">heading</h2>
+        <h3 class="ml-3">heading</h3>
+        <h4 class="ml-3">heading</h4>
+        <h5 class="ml-3">heading</h5>
+        <p>
+          other text styles like <b>bold text</b>, <em>emphasis</em> &
+          <mark>marked text</mark> are available.
+        </p>
+        <p>
+          for text alignment use the <span class="cd-snippet">text-left</span>,
+          <span class="cd-snippet">text-center</span>,
+          <span class="cd-snippet">text-right</span> classes.
+        </p>
+        <div class="prev-div p-1 mt-1 mb-1">
+          <p class="text-left"><mark>Lorem, ipsum.</mark></p>
+          <p class="text-center"><mark>Lorem, ipsum.</mark></p>
+          <p class="text-right"><mark>Lorem, ipsum.</mark></p>
+        </div>
+        <!-- buttons -->
+        <h2 id="buttons">buttons</h2>
+        <p>
+          minimal.css comes with a variety of buttons to choose from, start by
+          applying the <span class="cd-snippet">btn-primary</span> class which
+          will give you the default button styling, if you want a hover effect
+          you can add one by applying <span class="cd-snippet">hov-1</span> or
+          <span class="cd-snippet">hov-2</span> classes.
+        </p>
+        <div class="code-snippet mt-1 mb-1 p-2">
+          <p>
+            &lt;button class=&quot;<span class="hl">btn-primary hov-1</span
+            >&quot;&gt;click me&lt;/button&gt;
+          </p>
+          <p>
+            &lt;button class=&quot;<span class="hl">btn-primary hov-2</span
+            >&quot;&gt;click me&lt;/button&gt;
+          </p>
+        </div>
+        <button class="btn-primary hov-1 mr-1">click me</button>
+        <button class="btn-primary hov-2 ml-1">click me</button>
+        <div class="code-snippet mt-1 mb-1 p-2">
+          <p>
+            &lt;button class=&quot;<span class="hl">btn-sky</span
+            >&quot;&gt;click me&lt;/button&gt;
+          </p>
+          <p>
+            &lt;button class=&quot;<span class="hl">btn-dark</span
+            >&quot;&gt;click me&lt;/button&gt;
+          </p>
+          <p>
+            &lt;button class=&quot;<span class="hl">btn-success</span
+            >&quot;&gt;click me&lt;/button&gt;
+          </p>
+          <p>
+            &lt;button class=&quot;<span class="hl">btn-danger</span
+            >&quot;&gt;click me&lt;/button&gt;
+          </p>
+          <p>
+            &lt;button class=&quot;<span class="hl">btn-warning</span
+            >&quot;&gt;click me&lt;/button&gt;
+          </p>
+          <p>
+            &lt;button class=&quot;<span class="hl">btn-clear</span
+            >&quot;&gt;click me&lt;/button&gt;
+          </p>
+          <p>
+            &lt;button class=&quot;<span class="hl">btn-disabled</span
+            >&quot;&gt;click me&lt;/button&gt;
+          </p>
+        </div>
+        <button class="btn-sky">click me</button>
+        <button class="btn-dark">click me</button>
+        <button class="btn-success">click me</button>
+        <button class="btn-danger">click me</button>
+        <button class="btn-warning">click me</button>
+        <button class="btn-clear">click me</button>
+        <button class="btn-disabled">click me</button>
+        <p class="mt-1">
+          for a rounded or squared button simply add the
+          <span class="cd-snippet">round</span> or
+          <span class="cd-snippet">box</span> classes.
+        </p>
+        <div class="code-snippet p-2 mt-1 mb-1">
+          <p>
+            &lt;button class=&quot;<span class="hl">btn-primary round</span
+            >&quot;&gt;click me&lt;/button&gt;
+          </p>
+          <p>
+            &lt;button class=&quot;<span class="hl">btn-primary box</span
+            >&quot;&gt;click me&lt;/button&gt;
+          </p>
+        </div>
+        <button class="btn-primary round mr-1">click me</button>
+        <button class="btn-primary box ml-1">click me</button>
+        <p class="mt-1">
+          if you want to change the width of a button the
+          <span class="cd-snippet">w-(25...100)</span> class works.
+        </p>
+        <div class="code-snippet mt-1 mb-1 p-2">
+          <p>
+            &lt;button class=&quot;<span class="hl">btn-sky w-25</span
+            >&quot;&gt;click me&lt;/button&gt;
+          </p>
+          <p>
+            &lt;button class=&quot;<span class="hl">btn-warning w-50</span
+            >&quot;&gt;click me&lt;/button&gt;
+          </p>
+          <p>
+            &lt;button class=&quot;<span class="hl">btn-success w-75</span
+            >&quot;&gt;click me&lt;/button&gt;
+          </p>
+          <p>
+            &lt;button class=&quot;<span class="hl">btn-danger w-100</span
+            >&quot;&gt;click me&lt;/button&gt;
+          </p>
+        </div>
+        <button class="btn-sky w-25 block">click me</button>
+        <button class="btn-warning w-50">click me</button>
+        <button class="btn-success w-75">click me</button>
+        <button class="btn-danger w-100">click me</button>
+        <!-- forms -->
+        <h2 id="form">forms</h2>
+        <p>
+          labels, inputs & text-areas all have full width of the parent
+          container and are in a block level.
+        </p>
+        <div class="code-snippet mt-1 mb-1 p-2">
+          <p>&lt;form&gt;</p>
+          <p>&lt;label&gt;name&lt;/label&gt;</p>
+          <p>&lt;input type=&quot;text&quot; /&gt;</p>
+          <p>&lt;label&gt;age&lt;/label&gt;</p>
+          <p>&lt;input type=&quot;number&quot;/&gt;</p>
+          <p>&lt;label&gt;gender&lt;/label&gt;</p>
+          <p>&lt;select&gt;</p>
+          <p>&lt;option value=&quot;m&quot;&gt;male&lt;/option&gt;</p>
+          <p>&lt;option value=&quot;f&quot;&gt;female&lt;/option&gt;</p>
+          <p>&lt;option value=&quot;t&quot;&gt;other&lt;/option&gt;</p>
+          <p>&lt;/select&gt;</p>
+          <p>&lt;label&gt;write a comment&lt;/label&gt;</p>
+          <p>
+            &lt;textarea cols=&quot;30&quot;
+            rows=&quot;5&quot;&gt;&lt;/textarea&gt;
+          </p>
+          <p>&lt;/form&gt;</p>
+        </div>
+        <form>
+          <label>name</label>
+          <input type="text" />
+          <label>age</label>
+          <input type="number" />
+          <label>gender</label>
+          <select>
+            <option value="">select...</option>
+            <option value="">male</option>
+            <option value="">female</option>
+            <option value="">other</option>
+          </select>
+          <label>write a comment</label>
+          <textarea cols="30" rows="5"></textarea>
+        </form>
+        <!-- form validation -->
+        <h4 class="mt-1">form validation</h4>
+        <p>
+          to show the user that their action was successful use the
+          <span class="cd-snippet">i-success</span> class, and if the user input
+          has some sort of error use the
+          <span class="cd-snippet">i-error</span> class
+        </p>
+        <div class="code-snippet mt-1 mb-1 p-2">
+          <p>
+            &lt;input type=&quot;text&quot; class=&quot;<span class="hl"
+              >i-success</span
+            >&quot; /&gt;
+          </p>
+          <p>
+            &lt;input type=&quot;text&quot; class=&quot;<span class="hl"
+              >i-error</span
+            >&quot; /&gt;
+          </p>
+        </div>
+        <input type="text" class="i-success" />
+        <input type="text" class="i-error" />
+        <button type="submit" class="btn-dark">submit</button>
+        <!-- tables -->
+        <h2 id="tables">tables</h2>
+        <p>tabels have bold headings and 100% width.</p>
+        <div class="code-snippet p-2 mt-1 mb-1">
+          <p>&lt;table&gt;</p>
+          <p>&lt;tr&gt;</p>
+          <p>&lt;th&gt;header&lt;/th&gt;</p>
+          <p>&lt;th&gt;header&lt;/th&gt;</p>
+          <p>&lt;th&gt;header&lt;/th&gt;</p>
+          <p>&lt;/tr&gt;</p>
+          <p>&lt;/tr&gt;</p>
+          <p>&lt;td&gt;content&lt;/td&gt;</p>
+          <p>&lt;td&gt;content&lt;/td&gt;</p>
+          <p>&lt;td&gt;content&lt;/td&gt;</p>
+          <p>&lt;/tr&gt;</p>
+          <p>&lt;/table&gt;</p>
+        </div>
+        <div class="os">
+          <table>
+            <tr>
+              <th>language</th>
+              <th>usage</th>
+              <th>number of users</th>
+            </tr>
+            <tr>
+              <td>javascript</td>
+              <td>web development</td>
+              <td>~12400000</td>
+            </tr>
+            <tr>
+              <td>python</td>
+              <td>machine learning</td>
+              <td>~8000000</td>
+            </tr>
+            <tr>
+              <td>java</td>
+              <td>desktop/mobile development</td>
+              <td>~8100000</td>
+            </tr>
+          </table>
+        </div>
+        <h2 id="helper">helpers</h2>
+        <p>
+          helper classes are used to speed up the coding process and we have
+          already used them in the past sections such as the
+          <span class="cd-snippet">width & padding</span> classes,
+          <span class="cd-snippet">flex-box</span> classes and the
+          <span class="cd-snippet">text-alignment</span>
+          ones. but here is a couple more!
+        </p>
+        <table>
+          <tr>
+            <th class="w-25">class name</th>
+            <th>what is does</th>
+          </tr>
+          <tr>
+            <td><span class="cd-snippet">block</span></td>
+            <td>display: block;</td>
+          </tr>
+          <tr>
+            <td><span class="cd-snippet">hide</span></td>
+            <td>display: none;</td>
+          </tr>
+          <tr>
+            <td><span class="cd-snippet">inline</span></td>
+            <td>display: inline;</td>
+          </tr>
+          <tr>
+            <td><span class="cd-snippet">inline-block</span></td>
+            <td>display: inline-block;</td>
+          </tr>
+          <tr>
+            <td><span class="cd-snippet">r-img</span></td>
+            <td>makes an image responsive</td>
+          </tr>
+          <tr>
+            <td><span class="cd-snippet">shadow</span></td>
+            <td>box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);</td>
+          </tr>
+          <tr>
+            <td><span class="cd-snippet">b-radius</span></td>
+            <td>border-radius: 0.4rem (4px);</td>
+          </tr>
+        </table>
+        <div class="socials">
+          <a href="https://github.com/MFLXU"><i class="fa-brands fa-twitter hov-1"></i></a>
+          <a href="https://www.instagram.com/mflxu/"><i class="fa-brands fa-instagram hov-1"></i></a>
+          <a href="https://github.com/MFLXU"><i class="fa-brands fa-github hov-1"></i></a>
+        </div>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
