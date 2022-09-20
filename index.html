@@ -22,70 +22,48 @@
     <nav>
       <div class="nav__icon"><i id="nav-btn" class="fa-solid fa-bars"></i><h1>Sirius NET</h1></div>
       <div class="navbar">
-        <a class="hov-2" href="#getting-started"
-          ><i class="fa-solid fa-gear"></i> getting started</a
+        <a class="hov-2" href="#Description"
+          ><i class="fa-solid fa-gear"></i> Description</a
         >
-        <a class="hov-2" href="#containers"
+        <a class="hov-2" href="#IOT"
           ><i class="fa-solid fa-cube"></i> IOT</a
         >
-        <a class="hov-2" href="#grid"
+        <a class="hov-2" href="#MQTT"
           ><i class="fa-solid fa-border-none"></i> MQTT</a
         >
-        <a href="#flex" class="hov-2"><i class="fa-solid fa-box"></i> HIVEMQ</a>
-        <a class="hov-2" href="#typo"
+        <a href="#HIVEMQ" class="hov-2"><i class="fa-solid fa-box"></i> HIVEMQ</a>
+        <a class="hov-2" href="#Mosquitto"
           ><i class="fa-solid fa-heading"></i> Mosquitto</a
         >
-        <a class="hov-2" href="#buttons"
-          ><i class="fa-solid fa-arrow-pointer"></i> buttons</a
+        <a class="hov-2" href="#Paho"
+          ><i class="fa-solid fa-arrow-pointer"></i> Paho</a
         >
-        <a class="hov-2" href="#form"
-          ><i class="fa-solid fa-square-check"></i> forms</a
-        >
-        <a class="hov-2" href="#tables"
-          ><i class="fa-solid fa-table-cells"></i> tables</a
-        >
-        <a href="#helper" class="hov-2"
-          ><i class="fa-solid fa-briefcase-medical"></i> helpers</a
-        >
-        <a href="https://github.com/MFLXU/minimal.css.git" class="cta-btn mt-2 hov-2 shadow bha">
-          download stylesheet <i class="fa-brands fa-github"></i
-        ></a>
         
       </div>
     </nav>
     <div class="main__container container flex g-5 pt-2 pb-2">
       <aside class="flex flex-col g-1">
-        <h1>minimal.css</h1>
-        <a class="hov-2" href="#getting-started"
-          ><i class="fa-solid fa-gear"></i> getting started</a
+        <h1>GPS tracker using MQTT</h1>
+        <a class="hov-2" href="Description"
+          ><i class="fa-solid fa-gear"></i> Description</a
         >
-        <a class="hov-2" href="#containers"
+        <a class="hov-2" href="#IOT"
           ><i class="fa-solid fa-cube"></i> IOT</a
         >
-        <a class="hov-2" href="#grid"
+        <a class="hov-2" href="#MQTT"
           ><i class="fa-solid fa-border-none"></i> MQTT</a
         >
         <a href="#flex" class="hov-2"><i class="fa-solid fa-box"></i> HIVEMQ</a>
-        <a class="hov-2" href="#typo"
+        <a class="hov-2" href="#Mosquitto"
           ><i class="fa-solid fa-heading"></i> Mosquitto</a
         >
-        <a class="hov-2" href="#buttons"
-          ><i class="fa-solid fa-arrow-pointer"></i> buttons</a
+        <a class="hov-2" href="#Paho"
+          ><i class="fa-solid fa-arrow-pointer"></i> Paho</a
         >
-        <a class="hov-2" href="#form"
-          ><i class="fa-solid fa-square-check"></i> forms</a
-        >
-        <a class="hov-2" href="#tables"
-          ><i class="fa-solid fa-table-cells"></i> tables</a
-        >
-        <a href="#helper" class="hov-2"
-          ><i class="fa-solid fa-briefcase-medical"></i> helpers</a
-        >
-        <a href="https://github.com/MFLXU/minimal.css.git" class="cta-btn mt-2 hov-2 shadow bha">
-          download stylesheet</i
-        ></a>
+        
+        
         <p class="mt-2">
-          open-source project by
+          open source project by
           <a class="hov-2" href="https://g.dev/mflxu" target="_blank"
             >Sirius IOT team</a
           >
@@ -93,37 +71,22 @@
       </aside>
       <main class="w-75 pl-2">
         <div class="mb-5 mt-5">
+          
+          <h3>why use MQTT </h3>
           <p>
-            <s>one of</s> the <b>best</b> minimalistic and simple css framework.
-          </p>
-          <h3>why use minimal.css?</h3>
-          <p>
-            you should use minimal.css when working on small projects that don't
-            need all the utility of large frameworks such as
-            <a href="https://getbootstrap.com/">bootstrap</a>,
-            <a href="https://tailwindcss.com/">tailwind</a>..., minimal.css only
-            style standards html elements.
+           MQTT is a low network lightweight protocol based on TCP/IP, it is low on energy and advantageous especially for wireless devices
+           it reduces the network bandwidth in communication and minimizes data packets
           </p>
         </div>
         <!-- intro -->
-        <h2 id="getting-started">getting started</h2>
+        <h2 id="Description"> Description</h2>
         <p>
-          start by cloning the github repository, then copy the minimal.css file
-          into your project folder.
+          For our summer internship project, we worked on different IoT solutions at Sirius NET. We have got to learn a lot and to practice our programming skills that we acquired at school or at clubs.
+          This internship opened our eyes to the IoT field, with our supervisor Mr Amine Fellahi that has been a generous encyclopedia that didn’t hesitate to share with us his years of experience in the field.
+          Our solution is based on a BCE GPS device, it is a device that offers many functionalities such as GPS, weather data and can also be linked to other sensors such as the car’s CAN.
+          We worked on getting the data from the BCE device to the server and database using the MQTT protocol,and translating the payloads from their formats to human readable information.
+          
         </p>
-        <p>
-          after creating a new HTML5 file, link the minimal.css file in the
-          <span class="cd-snippet">head</span> section.
-        </p>
-        <div class="code-snippet p-2 mt-1 mb-1">
-          <p class="comment">&lt;!-- minimal css --&gt;</p>
-          <p>
-            &lt;link rel=&quot;stylesheet&quot; href=&quot;<span class="hl"
-              >minimal.css</span
-            >&quot; /&gt;
-          </p>
-        </div>
-        <p>now enjoy HTML5 with minimal.css styling applied.</p>
         <!-- containers -->
         <h2 id="containers">containers</h2>
         <p>
