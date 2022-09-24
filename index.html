@@ -20,36 +20,36 @@
   </head>
   <body>
     <nav>
-      <div class="nav__icon"><i id="nav-btn" class="fa-solid fa-bars"></i><h1>Sirius NET</h1></div>
+      <div class="nav__icon">
+        <i id="nav-btn" class="fa-solid fa-bars"></i>
+        <h1>Sirius NET</h1>
+      </div>
       <div class="navbar">
         <a class="hov-2" href="#Description"
           ><i class="fa-solid fa-gear"></i> Description</a
         >
-        <a class="hov-2" href="#IOT"
-          ><i class="fa-solid fa-cube"></i> IOT</a
-        >
+        <a class="hov-2" href="#IOT"><i class="fa-solid fa-cube"></i> IOT</a>
         <a class="hov-2" href="#MQTT"
           ><i class="fa-solid fa-border-none"></i> MQTT</a
         >
-        <a href="#HIVEMQ" class="hov-2"><i class="fa-solid fa-box"></i> HIVEMQ</a>
+        <a href="#HIVEMQ" class="hov-2"
+          ><i class="fa-solid fa-box"></i> HIVEMQ</a
+        >
         <a class="hov-2" href="#Mosquitto"
           ><i class="fa-solid fa-heading"></i> Mosquitto</a
         >
         <a class="hov-2" href="#Paho"
           ><i class="fa-solid fa-arrow-pointer"></i> Paho</a
         >
-        
       </div>
     </nav>
     <div class="main__container container flex g-5 pt-2 pb-2">
       <aside class="flex flex-col g-1">
         <h1>GPS tracker using MQTT</h1>
-        <a class="hov-2" href="Description"
+        <a class="hov-2" href="#Description"
           ><i class="fa-solid fa-gear"></i> Description</a
         >
-        <a class="hov-2" href="#IOT"
-          ><i class="fa-solid fa-cube"></i> IOT</a
-        >
+        <a class="hov-2" href="#IOT"><i class="fa-solid fa-cube"></i> IOT</a>
         <a class="hov-2" href="#MQTT"
           ><i class="fa-solid fa-border-none"></i> MQTT</a
         >
@@ -60,8 +60,7 @@
         <a class="hov-2" href="#Paho"
           ><i class="fa-solid fa-arrow-pointer"></i> Paho</a
         >
-        
-        
+
         <p class="mt-2">
           open source project by
           <a class="hov-2" href="https://g.dev/mflxu" target="_blank"
@@ -71,182 +70,64 @@
       </aside>
       <main class="w-75 pl-2">
         <div class="mb-5 mt-5">
-          
-          <h3>why use MQTT </h3>
+          <h3>why use MQTT</h3>
           <p>
-           MQTT is a low network lightweight protocol based on TCP/IP, it is low on energy and advantageous especially for wireless devices
-           it reduces the network bandwidth in communication and minimizes data packets
+            MQTT is a low network lightweight protocol based on TCP/IP, it is
+            low on energy and advantageous especially for wireless devices it
+            reduces the network bandwidth in communication and minimizes data
+            packets
           </p>
         </div>
         <!-- intro -->
-        <h2 id="Description"> Description</h2>
+        <h2 id="Description">Description</h2>
         <p>
-          For our summer internship project, we worked on different IoT solutions at Sirius NET. We have got to learn a lot and to practice our programming skills that we acquired at school or at clubs.
-          This internship opened our eyes to the IoT field, with our supervisor Mr Amine Fellahi that has been a generous encyclopedia that didn’t hesitate to share with us his years of experience in the field.
-          Our solution is based on a BCE GPS device, it is a device that offers many functionalities such as GPS, weather data and can also be linked to other sensors such as the car’s CAN.
-          We worked on getting the data from the BCE device to the server and database using the MQTT protocol,and translating the payloads from their formats to human readable information.
-          
+          For our summer internship project, we worked on different IoT
+          solutions at Sirius NET. We have got to learn a lot and to practice
+          our programming skills that we acquired at school or at clubs. This
+          internship opened our eyes to the IoT field, with our supervisor Mr
+          Amine Fellahi that has been a generous encyclopedia that didn’t
+          hesitate to share with us his years of experience in the field. Our
+          solution is based on a BCE GPS device, it is a device that offers many
+          functionalities such as GPS, weather data and can also be linked to
+          other sensors such as the car’s CAN. We worked on getting the data
+          from the BCE device to the server and database using the MQTT
+          protocol,and translating the payloads from their formats to human
+          readable information.
         </p>
-        <!-- containers -->
-        <h2 id="containers">containers</h2>
+        <!-- IOT -->
+        <h2 id="IOT">IOT</h2>
         <p>
-          container class changes depending on the viewport, element without the
-          <span class="cd-snippet">container</span> class applied will span
-          throught the width of the view port.
+          The Internet of Things (IoT) describes the network of physical
+          objects—“things”—that are embedded with sensors, software, and other
+          technologies for the purpose of connecting and exchanging data with
+          other devices and systems over the internet. These devices range from
+          ordinary household objects to sophisticated industrial tools
         </p>
-        <div class="code-snippet p-2 mt-1 mb-1">
-          <p>&lt;div class=&quot;<span class="hl">container</span>&quot;&gt;</p>
-          <p class="comment ml-2">&lt;!-- content --&gt;</p>
-          &lt;/div&gt;
-        </div>
-        <table class="mt-1 mb-1">
-          <tr>
-            <th>desktop</th>
-            <th>tablet</th>
-            <th>smartphone</th>
-          </tr>
-          <tr>
-            <td>1300px</td>
-            <td>94%</td>
-            <td>90%</td>
-          </tr>
-        </table>
-        <!-- width & height -->
-        <h4>width & height</h4>
-        <p>
-          its easy to define the width or the height of an element and that
-          using the <span class="cd-snippet">w-(25...100)</span> for the width
-          or <span class="cd-snippet">h-(25...100)</span> for the height.
-        </p>
-        <div class="code-snippet p-2 mt-1 mb-1">
-          <p>&lt;div class=&quot;<span class="hl">container</span>&quot;&gt;</p>
-          <p>
-            &lt;div class=&quot;<span class="hl">div-1 w-25</span
-            >&quot;&gt;&lt;/div&gt;
-          </p>
-          <p>
-            &lt;div class=&quot;<span class="hl">div-2 w-50</span
-            >&quot;&gt;&lt;/div&gt;
-          </p>
-          <p>
-            &lt;div class=&quot;<span class="hl">div-3 w-75</span
-            >&quot;&gt;&lt;/div&gt;
-          </p>
-          <p>
-            &lt;div class=&quot;<span class="hl">div-4 w-100</span
-            >&quot;&gt;&lt;/div&gt;
-          </p>
-          <p>&lt;/div&gt;</p>
-        </div>
-        <div class="prev-div w-100 mt-1 mb-1">
-          <div class="div-1 w-25 vertical-center"><span>w-25</span></div>
-          <div class="div-2 w-50 vertical-center"><span>w-50</span></div>
-          <div class="div-3 w-75 vertical-center"><span>w-75</span></div>
-          <div class="div-4 w-100 vertical-center"><span>w-100</span></div>
-        </div>
-        <h4>margin & padding</h4>
-        <p>
-          to add a margin or padding to an element, simply add the
-          <span class="cd-snippet">m-(1...5)</span> for margin or
-          <span class="cd-snippet">m-(1...5)</span> for padding, to be more
-          specific use the direction specified classes.
-        </p>
-        <table>
-          <tr>
-            <th>direction</th>
-            <th>margin</th>
-            <th>padding</th>
-          </tr>
-          <tr>
-            <td>all</td>
-            <td>
-              <span class="cd-snippet">m-(1...5)</span>
-            </td>
-            <td><span class="cd-snippet">p-(1...5)</span></td>
-          </tr>
-          <tr>
-            <td>top</td>
-            <td>
-              <span class="cd-snippet">mt-(1...5)</span>
-            </td>
-            <td><span class="cd-snippet">pt-(1...5)</span></td>
-          </tr>
-          <tr>
-            <td>left</td>
-            <td>
-              <span class="cd-snippet">ml-(1...5)</span>
-            </td>
-            <td><span class="cd-snippet">pl-(1...5)</span></td>
-          </tr>
-          <tr>
-            <td>right</td>
-            <td>
-              <span class="cd-snippet">mr-(1...5)</span>
-            </td>
-            <td><span class="cd-snippet">pr-(1...5)</span></td>
-          </tr>
-          <tr>
-            <td>bottom</td>
-            <td>
-              <span class="cd-snippet">mb-(1...5)</span>
-            </td>
-            <td><span class="cd-snippet">pb-(1...5)</span></td>
-          </tr>
-        </table>
-        <div class="code-snippet mt-1 mb-1 p-2">
-          <p class="comment">
-            &lt;!-- gives the paragraph a margin of 2rem and padding of 1rem
-            --&gt;
-          </p>
-          <p>
-            &lt;p class=&quot;<span class="hl">m-2 p-1</span>&quot;&gt;Lorem
-            ipsum dolor sit amet.&lt;/p&gt;
-          </p>
-          <p class="comment">
-            &lt;!-- gives the paragraph a margin-top of 2rem and padding-left of
-            3rem --&gt;
-          </p>
-          <p>
-            &lt;p class=&quot;<span class="hl">mt-2 pl-3</span>&quot;&gt;Lorem
-            ipsum dolor sit amet.&lt;/p&gt;
-          </p>
-        </div>
+
         <!-- grid system -->
-        <h2 id="grid">grid</h2>
+        <h2 id="MQTT">MQTT</h2>
         <p>
-          a simple grid system, to set it up add the
-          <span class="cd-snippet">grid</span> class to it, and to set the
-          number of the columns use
-          <span class="cd-snippet">col-(1...12)</span>, rows are set to auto.
+          In this internship we've used an MQTT broker to guarantee the
+          communication between our device and the server. In this part, we'll
+          be talking about MQTT and how you can use it for your IOT solution.
+          MQTT is a communication protocol based on tcp/ip.The first version of
+          the protocol was authored in 1999[<a
+            href="https://en.wikipedia.org/wiki/MQTT#cite_note-5"
+          >
+            1</a
+          >] by
+          <a href="https://en.wikipedia.org/wiki/Andy_Stanford-Clark">
+            Andy Stanford-Clark</a
+          >from IBM. It was used to monitor oil pipelines within the SCADA
+          industrial control system.[<a
+            href="https://en.wikipedia.org/wiki/MQTT#cite_note-6"
+            >2</a
+          >] The goal was to have a protocol that is bandwidth-efficient,
+          lightweight and uses little battery power, because the devices were
+          connected via satellite link which, at that time, was extremely
+          expensive.
         </p>
-        <div class="code-snippet p-2 mt-1 mb-1">
-          <p>
-            &lt;div class=&quot;<span class="hl">grid col-4</span>&quot;&gt;
-          </p>
-          <p class="ml-2">
-            &lt;div class=&quot;<span class="hl">div-1</span
-            >&quot;&gt;&lt;/div&gt;
-          </p>
-          <p>
-            &lt;div class=&quot;<span class="hl">div-2</span
-            >&quot;&gt;&lt;/div&gt;
-          </p>
-          <p>
-            &lt;div class=&quot;<span class="hl">div-3</span
-            >&quot;&gt;&lt;/div&gt;
-          </p>
-          <p>
-            &lt;div class=&quot;<span class="hl">div-4</span
-            >&quot;&gt;&lt;/div&gt;
-          </p>
-          <p>&lt;/div&gt;</p>
-        </div>
-        <div class="prev-div grid col-4 mt-1 mb-1">
-          <div class="div-1 vertical-center"></div>
-          <div class="div-2 vertical-center"></div>
-          <div class="div-3 vertical-center"></div>
-          <div class="div-4 vertical-center"></div>
-        </div>
+        <img src="./mqtt_broker.png" alt="mqtt broker" />
         <!-- gap -->
         <h4>gap</h4>
         <p>
@@ -587,9 +468,15 @@
           </tr>
         </table>
         <div class="socials">
-          <a href="https://github.com/MFLXU"><i class="fa-brands fa-twitter hov-1"></i></a>
-          <a href="https://www.instagram.com/mflxu/"><i class="fa-brands fa-instagram hov-1"></i></a>
-          <a href="https://github.com/MFLXU"><i class="fa-brands fa-github hov-1"></i></a>
+          <a href="https://github.com/MFLXU"
+            ><i class="fa-brands fa-twitter hov-1"></i
+          ></a>
+          <a href="https://www.instagram.com/mflxu/"
+            ><i class="fa-brands fa-instagram hov-1"></i
+          ></a>
+          <a href="https://github.com/MFLXU"
+            ><i class="fa-brands fa-github hov-1"></i
+          ></a>
         </div>
       </main>
     </div>
