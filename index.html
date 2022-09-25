@@ -53,7 +53,7 @@
         <a class="hov-2" href="#MQTT"
           ><i class="fa-solid fa-border-none"></i> MQTT</a
         >
-        <a href="#flex" class="hov-2"><i class="fa-solid fa-box"></i> HIVEMQ</a>
+        <a href="#HIVEMQ" class="hov-2"><i class="fa-solid fa-box"></i> HIVEMQ</a>
         <a class="hov-2" href="#Mosquitto"
           ><i class="fa-solid fa-heading"></i> Mosquitto</a
         >
@@ -70,7 +70,7 @@
       </aside>
       <main class="w-75 pl-2">
         <div class="mb-5 mt-5">
-          <h3>why use MQTT</h3>
+          <h3>Why MQTT</h3>
           <p>
             MQTT is a low network lightweight protocol based on TCP/IP, it is
             low on energy and advantageous especially for wireless devices it
@@ -127,355 +127,160 @@
           connected via satellite link which, at that time, was extremely
           expensive.
         </p>
-        <img src="./mqtt_broker.png" alt="mqtt broker" />
-        <!-- gap -->
-        <h4>gap</h4>
-        <p>
-          to add a gap between the grid's elements use the
-          <span class="cd-snippet">g-(1...5)</span> class on the parent element.
-        </p>
-        <div class="prev-div grid col-4 mt-1 mb-1 g-5">
-          <div class="div-1 vertical-center"></div>
-          <div class="div-2 vertical-center"></div>
-          <div class="div-3 vertical-center"></div>
-          <div class="div-4 vertical-center"></div>
-        </div>
-        <!-- flex system -->
-        <h2 id="flex">Flexbox</h2>
-        <p>
-          just like the grid system the flexbox system is easy to use, start by
-          applying the <span class="cd-snippet">flex</span> class to the parent
-          element, by default the
-          <span class="cd-snippet">flex-direction</span> is set to row, to
-          change that add the <span class="cd-snippet">flex-col</span> class.
-        </p>
-        <table class="mt-1 mb-2">
-          <tr>
-            <th class="w-25">class</th>
-            <th>what it does</th>
-          </tr>
-          <tr>
-            <td><span class="cd-snippet">flex</span></td>
-            <td>display : flex</td>
-          </tr>
-          <tr>
-            <td><span class="cd-snippet">flex-col</span></td>
-            <td>flex-direction: column</td>
-          </tr>
-          <tr>
-            <td><span class="cd-snippet">justify-center</span></td>
-            <td>justify-content: center</td>
-          </tr>
-          <tr>
-            <td><span class="cd-snippet">space-between</span></td>
-            <td>justify-content: space-between</td>
-          </tr>
-          <tr>
-            <td><span class="cd-snippet">align-center</span></td>
-            <td>align-items: center</td>
-          </tr>
-          <tr>
-            <td><span class="cd-snippet">flex-rev-row </span></td>
-            <td>flex-direction: row-reverse</td>
-          </tr>
-          <tr>
-            <td><span class="cd-snippet">flex-rev-col</span></td>
-            <td>flex-direction: column-reverse</td>
-          </tr>
-        </table>
-        <p>
-          to verticaly center elements use the
-          <span class="cd-snippet">vertical-center</span> class.
-        </p>
-        <div class="prev-div vertical-center pt-3 pb-3 mt-1 mb-1">
-          <div class="div-1 w-25"></div>
+
+        <!-- How does it work -->
+        <h3>How does MQTT work</h3>
+        <p>In MQTT, we have a broker, subscriber and publisher.</p>
+        <div class="imgClass">
+          <img
+            src="./mqtt_broker.png"
+            alt="mqtt broker"
+            style="padding-top: 7px"
+          />
+          <p style="padding-top: 7px">
+            <a
+              >Example of an MQTT connection (QoS 0) with connect,
+              publish/subscribe, and disconnect. The first message from client B
+              is stored due to the retain flag.
+            </a>
+          </p>
         </div>
 
-        <!-- typography -->
-        <h2 id="typo">typography</h2>
+        <h4>BROKER</h4>
         <p>
-          the font used is <em>DM SANS</em>, type is all set with
-          <span class="cd-snippet">rem</span> soo all font-size and spacial
-          relationships can be responsively sized based on a single HTML5
-          proprety, for example <span class="cd-snippet">3.6rem</span> equals to
-          <span class="cd-snippet">36px</span>.
+          A broker is a piece of software running on a computer (running
+          on-premises or in the cloud), and could be self-built or hosted by a
+          third party. It is available in both open source and proprietary
+          implementations. The broker acts as a post office. MQTT clients don't
+          use a direct connection address of the intended recipient, but use the
+          subject line called "Topic". Anyone who subscribes receives a copy of
+          all messages for that topic. Multiple clients can subscribe to a topic
+          from a single broker (one to many capability), and a single client can
+          register subscriptions to topics with multiple brokers (many to one).
+          [<a href="https://en.wikipedia.org/wiki/MQTT">3</a>]
         </p>
-        <h1 class="ml-3">heading</h1>
-        <h2 class="ml-3">heading</h2>
-        <h3 class="ml-3">heading</h3>
-        <h4 class="ml-3">heading</h4>
-        <h5 class="ml-3">heading</h5>
+        <h4>SUBSCRIBER</h4>
         <p>
-          other text styles like <b>bold text</b>, <em>emphasis</em> &
-          <mark>marked text</mark> are available.
+          A subscriber is an entity that subscribes to a specific topic on a
+          broker.it can subscribe to many topics at the same time, a subscriber
+          will receive all the messages sent in that topic.
+        </p>
+        <h4>PUBLISHER</h4>
+        <p>
+          A publisher is an entity that publishes,sends messages on a specific
+          topic. The subscriber of that topic will receive it. In our case the
+          publisher is the device because it's the one sending messages. When it
+          comes to choosing a broker, we have many open source options.In order
+          to get familiar with MQTT, it is recommended to start with HIVEMQ
+          which will be explained in a later section. For our project, we used a
+          Mosquitto broker that we installed on the server, Mosquitto will be
+          detailed in a later section.
+        </p>
+        <h3>Quality of service</h3>
+        <p>
+          Each connection to the broker can specify a quality of service (QoS)
+          measure. [<a href="https://en.wikipedia.org/wiki/MQTT#cite_note-24"
+            >4</a
+          >] These are classified in increasing order of overhead:
         </p>
         <p>
-          for text alignment use the <span class="cd-snippet">text-left</span>,
-          <span class="cd-snippet">text-center</span>,
-          <span class="cd-snippet">text-right</span> classes.
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● At most
+          once  the message is sent only once and the client and broker take no
+          additional steps to acknowledge delivery (fire and forget). <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● At least
+          once  the message is re-tried by the sender multiple times until
+          acknowledgement is received (acknowledged delivery).<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● Exactly
+          once the sender and receiver engage in a two-level handshake to
+          ensure only one copy of the message is received (assured delivery).<br />
+          This field does not affect handling of the underlying TCP data
+          transmissions; it is only used between MQTT senders and receivers
         </p>
-        <div class="prev-div p-1 mt-1 mb-1">
-          <p class="text-left"><mark>Lorem, ipsum.</mark></p>
-          <p class="text-center"><mark>Lorem, ipsum.</mark></p>
-          <p class="text-right"><mark>Lorem, ipsum.</mark></p>
-        </div>
-        <!-- buttons -->
-        <h2 id="buttons">buttons</h2>
+        <!-- HIVEMQ -->
+        <h2 id="HIVEMQ">HiveMQ</h2>
+        <h3>What is HiveMQ</h3>
         <p>
-          minimal.css comes with a variety of buttons to choose from, start by
-          applying the <span class="cd-snippet">btn-primary</span> class which
-          will give you the default button styling, if you want a hover effect
-          you can add one by applying <span class="cd-snippet">hov-1</span> or
-          <span class="cd-snippet">hov-2</span> classes.
+          HiveMQ is an online MQTT broker, in which you can simplify your Iot
+          application to only developing the client side, it offers several
+          tools for device management, including a dashboard with real-time data
+          displays. Role-based access can be configured and extensions are
+          monitored. You can benefit from HiveMQ free features by following this
+          documentation, and you can also use the business plan for larger
+          projects.
         </p>
-        <div class="code-snippet mt-1 mb-1 p-2">
-          <p>
-            &lt;button class=&quot;<span class="hl">btn-primary hov-1</span
-            >&quot;&gt;click me&lt;/button&gt;
-          </p>
-          <p>
-            &lt;button class=&quot;<span class="hl">btn-primary hov-2</span
-            >&quot;&gt;click me&lt;/button&gt;
-          </p>
-        </div>
-        <button class="btn-primary hov-1 mr-1">click me</button>
-        <button class="btn-primary hov-2 ml-1">click me</button>
-        <div class="code-snippet mt-1 mb-1 p-2">
-          <p>
-            &lt;button class=&quot;<span class="hl">btn-sky</span
-            >&quot;&gt;click me&lt;/button&gt;
-          </p>
-          <p>
-            &lt;button class=&quot;<span class="hl">btn-dark</span
-            >&quot;&gt;click me&lt;/button&gt;
-          </p>
-          <p>
-            &lt;button class=&quot;<span class="hl">btn-success</span
-            >&quot;&gt;click me&lt;/button&gt;
-          </p>
-          <p>
-            &lt;button class=&quot;<span class="hl">btn-danger</span
-            >&quot;&gt;click me&lt;/button&gt;
-          </p>
-          <p>
-            &lt;button class=&quot;<span class="hl">btn-warning</span
-            >&quot;&gt;click me&lt;/button&gt;
-          </p>
-          <p>
-            &lt;button class=&quot;<span class="hl">btn-clear</span
-            >&quot;&gt;click me&lt;/button&gt;
-          </p>
-          <p>
-            &lt;button class=&quot;<span class="hl">btn-disabled</span
-            >&quot;&gt;click me&lt;/button&gt;
-          </p>
-        </div>
-        <button class="btn-sky">click me</button>
-        <button class="btn-dark">click me</button>
-        <button class="btn-success">click me</button>
-        <button class="btn-danger">click me</button>
-        <button class="btn-warning">click me</button>
-        <button class="btn-clear">click me</button>
-        <button class="btn-disabled">click me</button>
-        <p class="mt-1">
-          for a rounded or squared button simply add the
-          <span class="cd-snippet">round</span> or
-          <span class="cd-snippet">box</span> classes.
-        </p>
-        <div class="code-snippet p-2 mt-1 mb-1">
-          <p>
-            &lt;button class=&quot;<span class="hl">btn-primary round</span
-            >&quot;&gt;click me&lt;/button&gt;
-          </p>
-          <p>
-            &lt;button class=&quot;<span class="hl">btn-primary box</span
-            >&quot;&gt;click me&lt;/button&gt;
-          </p>
-        </div>
-        <button class="btn-primary round mr-1">click me</button>
-        <button class="btn-primary box ml-1">click me</button>
-        <p class="mt-1">
-          if you want to change the width of a button the
-          <span class="cd-snippet">w-(25...100)</span> class works.
-        </p>
-        <div class="code-snippet mt-1 mb-1 p-2">
-          <p>
-            &lt;button class=&quot;<span class="hl">btn-sky w-25</span
-            >&quot;&gt;click me&lt;/button&gt;
-          </p>
-          <p>
-            &lt;button class=&quot;<span class="hl">btn-warning w-50</span
-            >&quot;&gt;click me&lt;/button&gt;
-          </p>
-          <p>
-            &lt;button class=&quot;<span class="hl">btn-success w-75</span
-            >&quot;&gt;click me&lt;/button&gt;
-          </p>
-          <p>
-            &lt;button class=&quot;<span class="hl">btn-danger w-100</span
-            >&quot;&gt;click me&lt;/button&gt;
-          </p>
-        </div>
-        <button class="btn-sky w-25 block">click me</button>
-        <button class="btn-warning w-50">click me</button>
-        <button class="btn-success w-75">click me</button>
-        <button class="btn-danger w-100">click me</button>
-        <!-- forms -->
-        <h2 id="form">forms</h2>
+        <h3>Getting started with HiveMQ</h3>
         <p>
-          labels, inputs & text-areas all have full width of the parent
-          container and are in a block level.
+          First, go to HiveMQ cloud under Cloud in the navigation bar, and then
+          create an account on Sign up now, you can choose to log in using your
+          email or github. After that you will get you profile as follows:
+          Choose the plan that suits you
         </p>
-        <div class="code-snippet mt-1 mb-1 p-2">
-          <p>&lt;form&gt;</p>
-          <p>&lt;label&gt;name&lt;/label&gt;</p>
-          <p>&lt;input type=&quot;text&quot; /&gt;</p>
-          <p>&lt;label&gt;age&lt;/label&gt;</p>
-          <p>&lt;input type=&quot;number&quot;/&gt;</p>
-          <p>&lt;label&gt;gender&lt;/label&gt;</p>
-          <p>&lt;select&gt;</p>
-          <p>&lt;option value=&quot;m&quot;&gt;male&lt;/option&gt;</p>
-          <p>&lt;option value=&quot;f&quot;&gt;female&lt;/option&gt;</p>
-          <p>&lt;option value=&quot;t&quot;&gt;other&lt;/option&gt;</p>
-          <p>&lt;/select&gt;</p>
-          <p>&lt;label&gt;write a comment&lt;/label&gt;</p>
-          <p>
-            &lt;textarea cols=&quot;30&quot;
-            rows=&quot;5&quot;&gt;&lt;/textarea&gt;
-          </p>
-          <p>&lt;/form&gt;</p>
+        <div class="imgClass2">
+          <img src="./images/hivemq/image5.png" alt="h1" width="700" height="400"/>
+          <img src="./images/hivemq/image3.png" alt="h2" width="700" height="400"/>
+          <p>Select the HiveMQ package that you want.</p>
+
+          <img src="./images/hivemq/image7.png" alt="h3" width="700" height="400"/>
         </div>
-        <form>
-          <label>name</label>
-          <input type="text" />
-          <label>age</label>
-          <input type="number" />
-          <label>gender</label>
-          <select>
-            <option value="">select...</option>
-            <option value="">male</option>
-            <option value="">female</option>
-            <option value="">other</option>
-          </select>
-          <label>write a comment</label>
-          <textarea cols="30" rows="5"></textarea>
-        </form>
-        <!-- form validation -->
-        <h4 class="mt-1">form validation</h4>
         <p>
-          to show the user that their action was successful use the
-          <span class="cd-snippet">i-success</span> class, and if the user input
-          has some sort of error use the
-          <span class="cd-snippet">i-error</span> class
+          Choose a service provider,once you are in, it&lsquo;s time to create a
+          cluster! Next, go to Manage Cluster and then choose Access management
+          on the top so that you can provide a user name and a password for your
+          cluster, it looks like this :
         </p>
-        <div class="code-snippet mt-1 mb-1 p-2">
-          <p>
-            &lt;input type=&quot;text&quot; class=&quot;<span class="hl"
-              >i-success</span
-            >&quot; /&gt;
-          </p>
-          <p>
-            &lt;input type=&quot;text&quot; class=&quot;<span class="hl"
-              >i-error</span
-            >&quot; /&gt;
-          </p>
+        <div class="imgClass2">
+          <img src="./images/hivemq/image16.png" alt="h3" width="700" height="400"/>
+
         </div>
-        <input type="text" class="i-success" />
-        <input type="text" class="i-error" />
-        <button type="submit" class="btn-dark">submit</button>
-        <!-- tables -->
-        <h2 id="tables">tables</h2>
-        <p>tabels have bold headings and 100% width.</p>
-        <div class="code-snippet p-2 mt-1 mb-1">
-          <p>&lt;table&gt;</p>
-          <p>&lt;tr&gt;</p>
-          <p>&lt;th&gt;header&lt;/th&gt;</p>
-          <p>&lt;th&gt;header&lt;/th&gt;</p>
-          <p>&lt;th&gt;header&lt;/th&gt;</p>
-          <p>&lt;/tr&gt;</p>
-          <p>&lt;/tr&gt;</p>
-          <p>&lt;td&gt;content&lt;/td&gt;</p>
-          <p>&lt;td&gt;content&lt;/td&gt;</p>
-          <p>&lt;td&gt;content&lt;/td&gt;</p>
-          <p>&lt;/tr&gt;</p>
-          <p>&lt;/table&gt;</p>
-        </div>
-        <div class="os">
-          <table>
-            <tr>
-              <th>language</th>
-              <th>usage</th>
-              <th>number of users</th>
-            </tr>
-            <tr>
-              <td>javascript</td>
-              <td>web development</td>
-              <td>~12400000</td>
-            </tr>
-            <tr>
-              <td>python</td>
-              <td>machine learning</td>
-              <td>~8000000</td>
-            </tr>
-            <tr>
-              <td>java</td>
-              <td>desktop/mobile development</td>
-              <td>~8100000</td>
-            </tr>
-          </table>
-        </div>
-        <h2 id="helper">helpers</h2>
         <p>
-          helper classes are used to speed up the coding process and we have
-          already used them in the past sections such as the
-          <span class="cd-snippet">width & padding</span> classes,
-          <span class="cd-snippet">flex-box</span> classes and the
-          <span class="cd-snippet">text-alignment</span>
-          ones. but here is a couple more!
+          After that, go to Getting started, you will see multiple tools to use
+          for your IoT applications
         </p>
-        <table>
-          <tr>
-            <th class="w-25">class name</th>
-            <th>what is does</th>
-          </tr>
-          <tr>
-            <td><span class="cd-snippet">block</span></td>
-            <td>display: block;</td>
-          </tr>
-          <tr>
-            <td><span class="cd-snippet">hide</span></td>
-            <td>display: none;</td>
-          </tr>
-          <tr>
-            <td><span class="cd-snippet">inline</span></td>
-            <td>display: inline;</td>
-          </tr>
-          <tr>
-            <td><span class="cd-snippet">inline-block</span></td>
-            <td>display: inline-block;</td>
-          </tr>
-          <tr>
-            <td><span class="cd-snippet">r-img</span></td>
-            <td>makes an image responsive</td>
-          </tr>
-          <tr>
-            <td><span class="cd-snippet">shadow</span></td>
-            <td>box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);</td>
-          </tr>
-          <tr>
-            <td><span class="cd-snippet">b-radius</span></td>
-            <td>border-radius: 0.4rem (4px);</td>
-          </tr>
-        </table>
+        <div class="imgClass2">
+          <img src="./images/hivemq/image45.png" alt="h4" width="700" height="400"/>
+        </div>
+
+        <h3>Websockets Client:</h3>
+        <p>
+          You can publish and subscribe using the user interface of HiveMQ, and
+          that&lsquo;s through the Websocket Client, here is an example of a
+          simple publish/subscribe scenario. The websockets client is right
+          here. <br />
+          Click on Access the websockets client and then, on the box that
+          appears, click on connect. Now you are connected as a client to your
+          cluster. <br />
+          Now let&lsquo;s publish a message ! <br />
+          go to the publish section and write your message, specify the topic
+          and the quality of the service
+        </p>
+
+        <div class="imgClass2">
+          <img src="./images/hivemq/image11.png" alt="h5" width="700" height="400" />
+        </div>
+<p>
+  Write a message and pick the topic,click on publish, your message is published now, but
+where to find it ? <br>
+Well, since you didn&lsquo;t do any subscription, no one will receive it !
+Let&lsquo;s now do a subscribe to a topic. <br>
+Go to the Subscriptions section and click on Add a new topic subscription, add the topic
+and the Qos. Republish your message now.
+</p>
+<div class="imgClass2">
+  <img src="./images/hivemq/image20.jpg" alt="h6" />
+  <p> Your message is successfully published now!</p>
+</div>
+
+<p>
+  Note: the &lsquo;#&lsquo;means: All topics, if you use the following specification, for example :
+  Anytopic/#, this means that all topics under &lsquo;AnyTopic&lsquo; are included in the subscription.
+</p>
+
         <div class="socials">
-          <a href="https://github.com/MFLXU"
+          <a href="https://github.com/imanehmz"
             ><i class="fa-brands fa-twitter hov-1"></i
           ></a>
-          <a href="https://www.instagram.com/mflxu/"
-            ><i class="fa-brands fa-instagram hov-1"></i
-          ></a>
-          <a href="https://github.com/MFLXU"
-            ><i class="fa-brands fa-github hov-1"></i
+          <a href="https://www.linkedin.com/in/imane-hamzaoui-667514199//"
+            ><i class="fa-brands fa-linkedin hov-1"></i
           ></a>
         </div>
       </main>
