@@ -53,7 +53,9 @@
         <a class="hov-2" href="#MQTT"
           ><i class="fa-solid fa-border-none"></i> MQTT</a
         >
-        <a href="#HIVEMQ" class="hov-2"><i class="fa-solid fa-box"></i> HIVEMQ</a>
+        <a href="#HIVEMQ" class="hov-2"
+          ><i class="fa-solid fa-box"></i> HIVEMQ</a
+        >
         <a class="hov-2" href="#Mosquitto"
           ><i class="fa-solid fa-heading"></i> Mosquitto</a
         >
@@ -62,13 +64,29 @@
         >
 
         <p class="mt-2">
-          open source project by
+          Open source project by
           <a class="hov-2" href="https://g.dev/mflxu" target="_blank"
             >Sirius IOT team</a
           >
         </p>
       </aside>
       <main class="w-75 pl-2">
+        <div style="display: flex; flex-direction:row">
+          <div>
+            <h1 style="padding-top: 50px;">Contributors to the project:</h1>
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● Fethi Azibi</h3>
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● Hind Ledraa</h3>
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● Imane Hamzaoui</h3>
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● Mohamed El Amine Bouchoucha</h3>
+        <h4> Documentation code by: <a href="https://github.com/imanehmz">Imane Hamzaoui</a></h4>
+        
+          </div>
+          <div style="padding-top :60px; padding-left: 50px;">
+            <img src="./images/mqtt.jpg" alt="mqtt pic" width="300px" height="300px">
+          </div>
+          
+
+        </div>
         <div class="mb-5 mt-5">
           <h3>Why MQTT</h3>
           <p>
@@ -85,11 +103,11 @@
           solutions at Sirius NET. We have got to learn a lot and to practice
           our programming skills that we acquired at school or at clubs. This
           internship opened our eyes to the IoT field, with our supervisor Mr
-          Amine Fellahi that has been a generous encyclopedia that didn’t
+          Amine Fellahi that has been a generous encyclopedia that didn&lsquo;t
           hesitate to share with us his years of experience in the field. Our
           solution is based on a BCE GPS device, it is a device that offers many
           functionalities such as GPS, weather data and can also be linked to
-          other sensors such as the car’s CAN. We worked on getting the data
+          other sensors such as the car&lsquo;s CAN. We worked on getting the data
           from the BCE device to the server and database using the MQTT
           protocol,and translating the payloads from their formats to human
           readable information.
@@ -133,7 +151,7 @@
         <p>In MQTT, we have a broker, subscriber and publisher.</p>
         <div class="imgClass">
           <img
-            src="./mqtt_broker.png"
+            src="./images/mqtt_broker.png"
             alt="mqtt broker"
             style="padding-top: 7px"
           />
@@ -185,14 +203,14 @@
         </p>
         <p>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● At most
-          once  the message is sent only once and the client and broker take no
+          once the message is sent only once and the client and broker take no
           additional steps to acknowledge delivery (fire and forget). <br />
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● At least
-          once  the message is re-tried by the sender multiple times until
+          once the message is re-tried by the sender multiple times until
           acknowledgement is received (acknowledged delivery).<br />
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● Exactly
-          once the sender and receiver engage in a two-level handshake to
-          ensure only one copy of the message is received (assured delivery).<br />
+          once the sender and receiver engage in a two-level handshake to ensure
+          only one copy of the message is received (assured delivery).<br />
           This field does not affect handling of the underlying TCP data
           transmissions; it is only used between MQTT senders and receivers
         </p>
@@ -216,11 +234,26 @@
           Choose the plan that suits you
         </p>
         <div class="imgClass2">
-          <img src="./images/hivemq/image5.png" alt="h1" width="700" height="400"/>
-          <img src="./images/hivemq/image3.png" alt="h2" width="700" height="400"/>
+          <img
+            src="./images/hivemq/image5.png"
+            alt="h1"
+            width="700"
+            height="400"
+          />
+          <img
+            src="./images/hivemq/image3.png"
+            alt="h2"
+            width="700"
+            height="400"
+          />
           <p>Select the HiveMQ package that you want.</p>
 
-          <img src="./images/hivemq/image7.png" alt="h3" width="700" height="400"/>
+          <img
+            src="./images/hivemq/image7.png"
+            alt="h3"
+            width="700"
+            height="400"
+          />
         </div>
         <p>
           Choose a service provider,once you are in, it&lsquo;s time to create a
@@ -229,15 +262,24 @@
           cluster, it looks like this :
         </p>
         <div class="imgClass2">
-          <img src="./images/hivemq/image16.png" alt="h3" width="700" height="400"/>
-
+          <img
+            src="./images/hivemq/image16.png"
+            alt="h3"
+            width="700"
+            height="400"
+          />
         </div>
         <p>
           After that, go to Getting started, you will see multiple tools to use
           for your IoT applications
         </p>
         <div class="imgClass2">
-          <img src="./images/hivemq/image45.png" alt="h4" width="700" height="400"/>
+          <img
+            src="./images/hivemq/image45.png"
+            alt="h4"
+            width="700"
+            height="400"
+          />
         </div>
 
         <h3>Websockets Client:</h3>
@@ -255,26 +297,134 @@
         </p>
 
         <div class="imgClass2">
-          <img src="./images/hivemq/image11.png" alt="h5" width="700" height="400" />
+          <img
+            src="./images/hivemq/image11.png"
+            alt="h5"
+            width="700"
+            height="400"
+          />
         </div>
+        <p>
+          Write a message and pick the topic,click on publish, your message is
+          published now, but where to find it ? <br />
+          Well, since you didn&lsquo;t do any subscription, no one will receive
+          it ! Let&lsquo;s now do a subscribe to a topic. <br />
+          Go to the Subscriptions section and click on Add a new topic
+          subscription, add the topic and the Qos. Republish your message now.
+        </p>
+        <div class="imgClass2">
+          <img src="./images/hivemq/image20.jpg" alt="h6" />
+          <p>Your message is successfully published now!</p>
+        </div>
+
+        <p>
+          Note: the &lsquo;#&lsquo;means: All topics, if you use the following
+          specification, for example : Anytopic/#, this means that all topics
+          under &lsquo;AnyTopic&lsquo; are included in the subscription.
+        </p>
+        <!-- Mosquitto part-->
+        <h2 id="Mosquitto">
+          Mosquitto
+        </h2>
 <p>
-  Write a message and pick the topic,click on publish, your message is published now, but
-where to find it ? <br>
-Well, since you didn&lsquo;t do any subscription, no one will receive it !
-Let&lsquo;s now do a subscribe to a topic. <br>
-Go to the Subscriptions section and click on Add a new topic subscription, add the topic
-and the Qos. Republish your message now.
+
+  In order to implement our broker we have installed the mosquitto Broker which is an open
+source developed by ECLIPSE foundation and CEDALO. <br>
+You can download it from this <a href="https://mosquitto.org/download/">link.</a>   <br>
+If you are working on a ubuntu machine as in our case you can check this try this command:
+ </p>
+<div class="code-snippet p-2 mt-1 mb-1">
+  <p><span class="hl">sudo apt-get update</span></p>
+</div> 
+<div class="code-snippet p-2 mt-1 mb-1">
+  <p><span class="hl">sudo apt-add-repository ppa:mosquitto-dev/mosquitto-ppa</span></p>
+</div> 
+<p>
+
+You can find the detailed documentation right <a href="https://mosquitto.org/documentation/"> here</a> <br>
+You can confirm if it is installed by using this command:
+
 </p>
-<div class="imgClass2">
-  <img src="./images/hivemq/image20.jpg" alt="h6" />
-  <p> Your message is successfully published now!</p>
+
+<div class="code-snippet p-2 mt-1 mb-1">
+  <p><span class="hl">mosquitto status</span></p>
+</div> 
+
+<p>
+If the result displays the mosquito&lsquo;s information details so it&lsquo;s PERFECT <br>
+Then you have to edit the configuration file. <br>
+Go to the conf file using the command : 
+</p>
+<div class="code-snippet p-2 mt-1 mb-1">
+  <p><span class="hl">cd /etc/mosquitto</span></p>
+</div> 
+<p>
+Then open the conf file using your prefered text editor vim probably not X)
+We use nano because it&lsquo;s simpler.
+</p>
+<div class="code-snippet p-2 mt-1 mb-1">
+  <p><span class="hl">so nano mosquitto.conf</span></p>
+</div> 
+<p>
+and add this line to this file :
+<div class="code-snippet p-2 mt-1 mb-1">
+  <p><span class="hl">allow_anonymous true
+    listener port</span></p>
+</div> 
+</p>
+<p>
+port : is the number of the port you want to communicate with your machine with.
+for example:
+If we write in the conf file:
+</p>
+<div class="code-snippet p-2 mt-1 mb-1">
+  <p><span class="hl">listener 2200</span></p>
+</div> 
+<p>
+In this example 2200 is the port which the machine will allow the mqtt mosquitto broker to use
+in order to communicate with other devices subscribers and publishers.
+Then if you want to go further you can add a username and password for each user.
+Which is a needed configuration for some Iot object in order to make the communication more
+secure.
+Here is a great video that will guide you : https://www.youtube.com/watch?v=IenXQvOcj54
+Run 
+</p>
+<div class="code-snippet p-2 mt-1 mb-1">
+  <p><span class="hl">mosquitto -d </span></p>
+</div> 
+<p>
+This commands runs mosquitto in the background as a daemon. All other
+behavior remains the same. <br>
+And then you can do some subscribe and publish. 
+</p>
+ <h3>Communication via MQTT using mosquitto:</h3> 
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● For Publish:
+</p>
+<div class="code-snippet p-2 mt-1 mb-1">
+  <p><span class="hl">mosquitto_pub -p PortNumber -h AdressOfYourBroker -m Message -t Topic</span></p>
+</div> 
+<p>
+Example:
+</p>
+<div class="code-snippet p-2 mt-1 mb-1">
+  <p><span class="hl">mosquitto_pub -p 1883 -h localhost -m "hello" -t "topic”</span></p>
+</div> 
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● For a Subscribe:
+</p>
+<div class="code-snippet p-2 mt-1 mb-1">
+  <p><span class="hl">mosquitto_sub -h AdressOfYourBroker -p PortNumber -t topics</span></p>
+</div> 
+<p>
+Example:
+</p>
+<div class="code-snippet p-2 mt-1 mb-1">
+  <p><span class="hl">mosquitto_sub -h localhost -p 1883 -t "#”</span></p>
 </div>
-
-<p>
-  Note: the &lsquo;#&lsquo;means: All topics, if you use the following specification, for example :
-  Anytopic/#, this means that all topics under &lsquo;AnyTopic&lsquo; are included in the subscription.
+<p> 
+Note : In this examples I&lsquo;m communicating with broker installed in my machine.
 </p>
-
         <div class="socials">
           <a href="https://github.com/imanehmz"
             ><i class="fa-brands fa-twitter hov-1"></i
